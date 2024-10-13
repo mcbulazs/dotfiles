@@ -1,6 +1,7 @@
 [submodule "nvim"]
 	path = ./nvim/.config/nvim
 	url = https://github.com/mcbulazs/nvim-config.git
+    branch = lazy
 
 [submodule "zsh-autosuggestions"]
     path = ./zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
