@@ -12,7 +12,7 @@ I only recommend the installation to for fresh profiles or for those who really 
 ### Must have packages
 
 ```sh
-sudo pacman -S --needed git zip unzip make fzf fd less man-db iwd pulseaudio brightnessctl ripgrep vim wget xclip xdg-utils xorg xorg-xinit make base-devel
+sudo pacman -S --needed git zip unzip make fzf stow fd less man-db iwd pulseaudio brightnessctl ripgrep vim wget xclip xdg-utils xorg xorg-xinit make base-devel
 ```
 
 ### If you use bluetooth
@@ -77,6 +77,7 @@ sudo reboot now
 - `unzip`
 - `make`
 - `fzf`
+- `stow`
 - `less`
 - `man-db`
 - `iwd`
