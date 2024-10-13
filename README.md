@@ -19,13 +19,23 @@ sudo pacman -S --needed git zip unzip make fzf stow fd less man-db iwd pulseaudi
 ```sh
 sudo pacman -S --needed pulseaudio pulseaudio-bluetooth blueberry
 ```
+
 ### Personal packages
 ```sh
 sudo pacman -S --needed bspwm sxhkd polybar kitty dunst pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim picom feh flameshot starship ttf-jetbrains-mono-nerd
 yay -S rofi-greenclip
 ```
+
+### yay
+```sh
+git clone https://aur.archlinux.org/yay-bin.git "$HOME/yay-bin"
+cd "$HOME/yay-bin"
+makepkg -si
+```
+
 ### ZSH
 ```sh
+usdo pacman -S zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
