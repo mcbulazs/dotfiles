@@ -1,0 +1,87 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+[](black)\
+$username\
+[](bg:dblue fg:black)\
+$directory\
+[](fg:dblue bg:dgreen)\
+$git_branch\
+$git_status\
+[](fg:dgreen bg:blue)\
+$docker_context\
+[ ](fg:blue)\
+$line_break$character"""
+
+palette = 'kittydefault'
+
+[palettes.kittydefault]
+dblack = '#05070b'
+black = '#767676'
+dred = '#cc0403'
+red = '#f2201f'
+dgreen = '#19cb00'
+green = '#23fd00'
+dyellow = '#cecb00'
+yellow = '#fffd00'
+dblue = '#0d73cc'
+blue = '#1a8fff'
+dpurple = '#cb1ed1'
+purple = '#fd28ff'
+daqua = '#0dcdcd'
+aqua = '#14ffff'
+dwhite = '#dddddd'
+white = '#ffffff'
+
+[username]
+show_always = true
+style_user = "bg:black fg:white"
+style_root = "bg:black fg:white"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:dblack bg:dblue"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:dgreen"
+format = '[[ $symbol $branch ](fg:dblack bg:dgreen)](bold $style)'
+
+[git_status]
+style = "bg:dgreen"
+format = '[[($all_status$ahead_behind )](fg:dblack bg:dgreen)]($style)'
+
+
+[docker_context]
+symbol = ""
+format = '[[ $symbol( $context) ](fg:green bg:blue)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:dpurple"
+format = '[[  $time ](fg:white bg:dpurple)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:green)'
+error_symbol = '[](bold fg:red)'
+vimcmd_symbol = '[](bold fg:creen)'
+vimcmd_replace_one_symbol = '[](bold fg:purple)'
+vimcmd_replace_symbol = '[](bold fg:purple)'
+vimcmd_visual_symbol = '[](bold fg:purple)'
