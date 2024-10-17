@@ -8,7 +8,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 eval "$(starship init zsh)"
 
 #plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-256color)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
