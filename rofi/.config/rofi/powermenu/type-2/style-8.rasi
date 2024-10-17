@@ -24,12 +24,12 @@ USE_BUTTONS=YES
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    east;
-    anchor:                      east;
+    location:                    northeast;
+    anchor:                      north;
     fullscreen:                  false;
-    width:                       95px;
-    x-offset:                    -20px;
-    y-offset:                    0px;
+    width:                       45px;
+    x-offset:                    -40px;
+    y-offset:                    40px;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -123,7 +123,7 @@ error-message {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       5;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -148,7 +148,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     25px 10px;
+    padding:                     10px 10px;
     border:                      0px solid;
     border-radius:               100%;
     border-color:                @selected;
@@ -157,7 +157,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 24";
+    font:                        "feather bold 13";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;

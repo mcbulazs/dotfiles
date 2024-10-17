@@ -1,0 +1,136 @@
+{
+	"margin-top": 5,
+	"margin-left": 10,
+	"margin-right": 10,
+	"height": 30,
+	"modules-left": ["clock", "hyprland/language", "tray", "custom/mediaplayer"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": [
+		"pulseaudio",
+		"pulseaudio#input",
+		"network",
+		"cpu",
+		"memory",
+		"battery",
+		"custom/power"
+	],
+	"hyprland/window": {
+		"format": "{}",
+		"max-length": 35,
+		"rewrite": {
+			"": "Hyprland"
+		},
+		"separate-outputs": true
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"active": " "
+		},
+		"sort-by-number": true,
+		"persistent-workspaces": {
+			"*": 4, // 4 workspaces by default on every monitor
+			"HDMI-A-1": 3 // but only three on HDMI-A-1
+		}
+		/*"format-icons": {
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V",
+			"6": "VI",
+			"7": "VII",
+			"8": "VIII",
+			"9": "IX",
+			"10": "X"
+		}*/
+	},
+	"custom/mediaplayer": {
+		"exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py",
+		"format": "{}",
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous",
+		"max-length": 40
+	},
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "󰌌 US",
+		"format-hu": "󰌌 HU",
+		"format-caps": "CAPS"
+	},
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		//"format-alt": "{:%Y-%m-%d}"
+		"format": "󰥔 {:%m/%d %R}"
+	},
+	"cpu": {
+		"format": "CPU:{usage}%",
+		"interval": 2,
+		"tooltip": false
+	},
+	"memory": {
+		"interval": 2,
+		"format": "RAM:{}%"
+	},
+	"temperature": {
+		"critical-threshold": 80,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": ["", "", ""]
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"interval": 2,
+		"format": "BAT:{icon}{capacity}%",
+		"format-full": "BAT:{icon}{capacity}%",
+		"format-charging": "BAT:󱐋{icon}{capacity}%",
+		"format-plugged": "BAT: {capacity}%",
+		"format-alt": "{time}",
+		"format-icons": [" ", " ", " ", " ", " "]
+	},
+	"network": {
+		"format-wifi": "  {essid}",
+		"format-ethernet": "ethernet",
+		"tooltip-format": "{ipaddr}",
+		//"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": " Disconnected",
+		"format-alt": "{ipaddr}"
+	},
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": "  Off ",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+	"pulseaudio#input": {
+		"format-source": " ",
+		"format-source-muted": " ",
+		"format": "{format_source}",
+		"on-click-right": "pavucontrol",
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"custom/power": {
+		"format": "⏻ ",
+		"tooltip": false,
+		"on-click": "$HOME/.config/rofi/powermenu/type-2/powermenu.sh"
+	}
+}

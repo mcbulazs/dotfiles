@@ -15,9 +15,10 @@ source $ZSH/oh-my-zsh.sh
 alias p='sudo pacman'
 
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-	startx
+    Hyprland
+	#startx
 fi
-
+fastfetch -c ~/.config/fastfetch/conf -l arch_small
 
 #yazi
 function y() {
