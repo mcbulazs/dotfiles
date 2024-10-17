@@ -27,7 +27,7 @@ confirmation "Do you want to install must-have packages?" &&
 confirmation "Do you want to install BLUETOOTH specific packages?" &&
     sudo pacman -S --needed pulseaudio pulseaudio-bluetooth blueberry
 confirmation "Do you want to install personal config packages?" && {
-  sudo pacman -S --needed bspwm sxhkd polybar kitty dunst pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim picom feh flameshot starship ttf-jetbrains-mono-nerd hyprland waybar hyprlock hypridle xwaylandvideobridge xorg-xwayland hyprpaper hyprshot xdg-desktop-portal-hyprland
+  sudo pacman -S --needed bspwm sxhkd polybar kitty dunst pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim picom feh flameshot starship ttf-jetbrains-mono-nerd hyprland waybar hyprlock hypridle xwaylandvideobridge xorg-xwayland hyprpaper xdg-desktop-portal-hyprland
   yay -S rofi-greenclip hyprshot
 }
 confirmation "Do you want to install zsh?" && {
