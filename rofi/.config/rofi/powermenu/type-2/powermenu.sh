@@ -74,7 +74,11 @@ run_cmd() {
 		elif [[ $1 == '--logout' ]]; then
             # hyprland
             #hyprlock
-            hyprctl dispatch exit
+            if [[ "$XDG_CURRENT_DESKTOP" == 'Hyprland' ]]; then
+                hyprctl dispatch exit
+            elif [[ "$XDG_CURRENT_DESKTOP" == 'bspwm' ]]; then
+				bspc quit
+            fi
 		#	if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 		#		openbox --exit
 		#	elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
@@ -101,7 +105,11 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-        hyprlock
+        if [[ "$XDG_CURRENT_DESKTOP" == 'Hyprland' ]]; then
+            hyprlock
+        elif [[ "$XDG_CURRENT_DESKTOP" == 'bspwm' ]]; then
+            betterlockscreen -l blur
+        fi
 		#if [[ -x '/usr/bin/betterlockscreen' ]]; then
 		#	betterlockscreen -l
 		#elif [[ -x '/usr/bin/i3lock' ]]; then

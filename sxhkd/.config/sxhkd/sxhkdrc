@@ -72,8 +72,14 @@ super + c + n
 #
 
 # quit/restart bspwm
-super + shift + {q,r}
-	bspc {quit,wm -r}
+#super + shift + {q,r}
+#	bspc {quit,wm -r}
+super + shift + r
+	bspc wm -r
+
+super + shift + q
+    ~/.config/rofi/powermenu/type-2/powermenu.sh
+
 
 # close and kill
 super + shift + c

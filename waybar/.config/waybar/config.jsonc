@@ -63,7 +63,7 @@
 	},
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		//"format-alt": "{:%Y-%m-%d}"
+		"format-alt": "󰥔 {:%m/%d %H:%M:%S}",
 		"format": "󰥔 {:%m/%d %R}"
 	},
 	"cpu": {
@@ -90,7 +90,7 @@
 		"format-full": "BAT:{icon}{capacity}%",
 		"format-charging": "BAT:󱐋{icon}{capacity}%",
 		"format-plugged": "BAT: {capacity}%",
-		"format-alt": "{time}",
+		//"format-alt": "{time}",
 		"format-icons": [" ", " ", " ", " ", " "]
 	},
 	"network": {
