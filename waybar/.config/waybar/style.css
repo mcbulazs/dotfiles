@@ -54,6 +54,7 @@ button:hover {
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: @surface2;
+    border-radius: 13px;
 }
 
 #workspaces button {
@@ -94,6 +95,9 @@ button:hover {
 
 #pulseaudio {
     color: @maroon;
+}
+#pulseaudio.input {
+    color: @green;
 }
 
 #network {
@@ -191,3 +195,4 @@ label:focus {
 #custom-power {
     color: #FF0000;
 }
+
