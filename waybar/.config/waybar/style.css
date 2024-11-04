@@ -196,3 +196,6 @@ label:focus {
     color: #FF0000;
 }
 
+#custom-notification {
+    padding-right: 10px;
+}
