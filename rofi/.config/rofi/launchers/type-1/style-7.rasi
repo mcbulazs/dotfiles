@@ -10,7 +10,7 @@
 /*****----- Configuration -----*****/
 configuration {
 	/*modi:                     "drun,calc,run,filebrowser,window";*/
-    modi:                       "drun,calc,emoji,clipboard:greenclip print";
+    modi:                       "drun,emoji,clipboard:greenclip print";
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
