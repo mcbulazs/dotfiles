@@ -7,30 +7,29 @@
 ### Prerequisites
 
 `git` `stow` 
-I only recommend the installation to for fresh profiles or for those who really do know what they are doing.
-
-### Must have packages
-
-```sh
-sudo pacman -S --needed git zip unzip make fzf stow fd less man-db iwd pulseaudio brightnessctl ripgrep vim wget xclip xdg-utils xorg xorg-xinit tree make base-devel
-```
-
-### If you use bluetooth
-```sh
-sudo pacman -S --needed pulseaudio pulseaudio-bluetooth blueberry
-```
-
-### Personal packages
-```sh
-sudo pacman -S --needed bspwm sxhkd polybar kitty dunst pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim picom feh flameshot starship ttf-jetbrains-mono-nerd hyprland waybar hyprlock hypridle xwaylandvideobridge xorg-xwayland hyprpaper hyprshot xdg-desktop-portal-hyprland
-yay -S rofi-greenclip
-```
+I only recommend the installation for fresh profiles or for those who really do know what they are doing.
 
 ### yay
 ```sh
 git clone https://aur.archlinux.org/yay-bin.git "$HOME/yay-bin"
 cd "$HOME/yay-bin"
 makepkg -si
+```
+
+### Must have packages
+
+```sh
+sudo pacman -S --needed git zip unzip make fzf stow fd less man-db iwd pipewire pipewire-pulse pipewire-alsa brightnessctl ripgrep vim wget xclip xdg-utils xorg tree make base-devel
+```
+
+### Personal packages
+```sh
+sudo pacman -S --needed kitty pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim starship ttf-jetbrains-mono-nerd
+
+#hyprland specific
+sudo pacman -S --needed hyprland waybar hyprlock hypridle xwaylandvideobridge xorg-xwayland hyprpaper hyprshot xdg-desktop-portal-hyprland swaync
+
+yay -S rofi-greenclip
 ```
 
 ### ZSH
@@ -63,19 +62,21 @@ sudo reboot now
 ## Packages
 
 ### Config specific packages
+#### Hyprland
+- `hyprland`
+- `waybar`
+- `hyprlock`
+- `hypridle`
+- `hyprpaper`
+- `hyprshot`
+- `swaync`
 
-- `bspwm`
-- `sxhkd`
-- `polybar` 
+#### Other
 - `kitty`
-- `dunst`
 - `pavucontrol`
 - `rofi`
 - `yazi`
 - `neovim`
-- `picom`
-- `feh`
-- `flameshot`
 - `fastfetch`
 - `starship`
 - `ttf-jetbrains-mono-nerd`
@@ -92,7 +93,6 @@ sudo reboot now
 - `man-db`
 - `iwd`
 - `neofetch`
-- `pulseaudio`
 - `ripgrep`
 - `vim`
 - `wget`
