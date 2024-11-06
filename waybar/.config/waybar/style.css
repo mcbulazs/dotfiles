@@ -63,6 +63,12 @@ button:hover {
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
+#workspaces button.active {
+    color: rgba(0, 0, 0, 1);
+    background-color: @text;
+    margin: 3px 0;
+    border-radius: 15px;
+}
 
 #workspaces button.focused {
     background-color: @lavender;
