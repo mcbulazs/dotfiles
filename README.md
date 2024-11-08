@@ -24,18 +24,18 @@ sudo pacman -S --needed git zip unzip make fzf stow fd less man-db iwd pipewire 
 
 ### Personal packages
 ```sh
-sudo pacman -S --needed kitty pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim starship ttf-jetbrains-mono-nerd
+sudo pacman -S --needed kitty pavucontrol fastfetch rofi rofi-calc rofi-emoji yazi neovim ttf-jetbrains-mono-nerd
 
 #hyprland specific
 sudo pacman -S --needed hyprland waybar hyprlock hypridle xwaylandvideobridge xorg-xwayland hyprpaper hyprshot xdg-desktop-portal-hyprland swaync
 
-yay -S rofi-greenclip
+yay -S rofi-greenclip oh-my-posh
 ```
 
 ### ZSH
+I am using zinit
 ```sh
-usdo pacman -S zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sudo pacman -S zsh
 ```
 
 ### Config
@@ -78,7 +78,7 @@ sudo reboot now
 - `yazi`
 - `neovim`
 - `fastfetch`
-- `starship`
+- `oh-my-posh`
 - `ttf-jetbrains-mono-nerd`
 
 ### "Must" have packages
