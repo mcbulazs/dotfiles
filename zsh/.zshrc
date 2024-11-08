@@ -56,7 +56,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 #shell interaction
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/oh-my-posh/config.toml)"
 eval "$(zoxide init --cmd cd zsh)"
 
 #aliases
