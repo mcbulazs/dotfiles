@@ -71,7 +71,7 @@ if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi
 
 # run on open terminal
-fastfetch -c ~/.config/fastfetch/conf -l arch_small
+#fastfetch -c ~/.config/fastfetch/conf -l arch_small
 
 #yazi
 function y() {
