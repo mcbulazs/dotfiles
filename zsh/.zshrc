@@ -64,6 +64,7 @@ alias p='sudo pacman'
 alias ls='ls --color'
 alias c='clear'
 alias grep='grep --color'
+alias lg='lazygit'
 
 # autoload Hyprland after login
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
