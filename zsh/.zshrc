@@ -33,6 +33,12 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^h' backward-char
+bindkey '^l' forward-char
+bindkey '^j' down-line-or-history
+bindkey '^k' up-line-or-history
+bindkey '^w' forward-word
+bindkey '^b' backward-word
 
 
 #history
