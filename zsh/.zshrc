@@ -74,7 +74,7 @@ alias lg='lazygit'
 
 # autoload Hyprland after login
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    Hyprland
+    start-hyprland
 fi
 
 # run on open terminal
